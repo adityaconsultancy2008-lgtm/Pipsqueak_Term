@@ -1,4 +1,10 @@
 /* ==================== DESIGN SYSTEM (DRAFT 3 PALETTE) ==================== */
+/* FORCE CORE CANVAS DARK MODE BEFORE OVERRIDES */
+html, body {
+    background: #0a0a0c !important;
+    background-color: #0a0a0c !important;
+    color: #e2e8f0 !important;
+}
 :root {
     --bg-canvas: #0a0a0c;
     --bg-surface: #121216;
