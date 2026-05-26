@@ -1,0 +1,324 @@
+/* ==================== DESIGN SYSTEM (DRAFT 3 PALETTE) ==================== */
+:root {
+    --bg-canvas: #0a0a0c;
+    --bg-surface: #121216;
+    --bg-terminal: #050507;
+    --text-primary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent-neon: #ff007f;
+    --accent-dim: #701a75;
+    --border-color: #1e1e24;
+    --green-accent: #10b981;
+    --font-mono: "Courier New", Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
+    margin: 4rem 0;
+}
+
+/* ==================== HERO SECTION & BRANDING ==================== */
+.hero-section {
+    padding: 6rem 0 2rem;
+    text-align: center;
+}
+
+.logo-wrapper {
+    font-family: var(--font-mono);
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.logo-accent {
+    background-color: var(--accent-neon);
+    color: var(--bg-canvas);
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.bracket {
+    color: var(--text-muted);
+}
+
+.cursor {
+    animation: blink 1s step-end infinite;
+    color: var(--accent-neon);
+}
+
+@keyframes blink {
+    from, to { color: transparent }
+    50% { color: var(--accent-neon) }
+}
+
+.subtitle {
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    max-width: 750px;
+    margin: 0 auto 3rem;
+}
+
+/* ==================== INTERACTIVE INSTALL CONTAINER ==================== */
+.terminal-install-container {
+    background-color: var(--bg-terminal);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    text-align: left;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.terminal-header {
+    background-color: var(--bg-surface);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 8px 8px 0 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+}
+.red { background-color: #ef4444; }
+.yellow { background-color: #f59e0b; }
+.green { background-color: #10b981; }
+
+.terminal-title {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-left: auto;
+}
+
+.terminal-body {
+    padding: 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    font-family: var(--font-mono);
+    position: relative;
+}
+
+.prompt {
+    color: var(--accent-neon);
+    margin-right: 0.75rem;
+    user-select: none;
+    font-weight: bold;
+}
+
+#install-command {
+    color: #a7f3d0;
+    font-size: 0.9rem;
+    word-break: break-all;
+    padding-right: 4.5rem;
+    line-height: 1.5;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    border-color: var(--accent-neon);
+    background-color: var(--bg-canvas);
+}
+
+.copy-icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+/* ==================== BUTTONS & INTERACTIONS ==================== */
+.cta-wrapper {
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem 1.75rem;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--accent-neon);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.1);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.3);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* ==================== UTILITY FEATURE MATRIX ==================== */
+.section-title {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--accent-neon);
+    margin-bottom: 2rem;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .matrix-grid { grid-template-columns: 1fr; }
+    .logo-wrapper { font-size: 2.5rem; }
+}
+
+.matrix-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.matrix-card:hover {
+    border-color: rgba(255, 0, 127, 0.4);
+}
+
+.matrix-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.matrix-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==================== LORE / IMAGE COMPARTMENT ==================== */
+.lore-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.lore-content {
+    flex: 1 1 450px;
+    padding: 3rem;
+}
+
+.lore-content h2 {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.lore-content p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.lore-quote {
+    font-family: var(--font-mono);
+    color: var(--green-accent);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.lore-visual {
+    flex: 1 1 350px;
+    background-color: var(--bg-terminal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-left: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .lore-visual { border-left: 0; border-top: 1px solid var(--border-color); }
+}
+
+.meme-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+/* ==================== GLOBAL FOOTER ==================== */
+.footer-global {
+    margin-top: 6rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}

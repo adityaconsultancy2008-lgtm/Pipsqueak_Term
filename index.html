@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipsqueak - Your Local Terminal Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Anime.js CDN (Tasteful, progressive-enhancement animation engine) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="container hero-container">
+            <!-- Draft 3 Visual branding representation in clean markup -->
+            <div class="logo-wrapper">
+                <span class="bracket">[</span><span class="logo-accent">P</span>1psqueak<span class="cursor">_</span><span class="bracket">]</span>
+            </div>
+            <p class="subtitle">f"runs {everywhere}. no {config} cult."</p>
+            
+            <h1 class="tagline">A lightweight, local-first terminal companion with tiny roommate mechanics, shell helpers, and optional personality layers.</h1>
+
+            <!-- ONE-LINE COPYABLE INSTALL BLOCK -->
+            <div class="terminal-install-container">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">~/pipsqueak_term</span>
+                </div>
+                <div class="terminal-body">
+                    <span class="prompt">$</span>
+                    <code id="install-command">curl -sSL https://raw.githubusercontent.com/user/pipsqueak_term/main/pipsqueak.py -o ~/pipsqueak.py && chmod +x ~/pipsqueak.py && sudo ln -sf ~/pipsqueak.py /usr/local/bin/pipsqueak</code>
+                    <button class="copy-btn" id="copy-trigger" aria-label="Copy install script">
+                        <svg class="copy-icon" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                        <span class="copy-text">COPY</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRIMARY GIT CALL TO ACTION -->
+            <div class="cta-wrapper">
+                <a href="https://github.com/user/pipsqueak_term" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                    <svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <hr class="section-divider">
+
+    <!-- TECHNICAL FEATURE MATRIX -->
+    <main class="matrix-section container">
+        <h2 class="section-title">// Core Utilities</h2>
+        <div class="matrix-grid">
+            <div class="matrix-card">
+                <h3>Platform Package Bridge</h3>
+                <p>Intelligently maps <code>pipsqueak install &lt;pkg&gt;</code> straight to your host's native manager: Homebrew (macOS), Advanced Package Tool (Debian/Ubuntu), or Pacman/AUR wrappers (Arch Linux). Includes strict safety checks to prevent binary command collisions.</p>
+            </div>
+            <div class="matrix-card">
+                <h3>Vibe Personality Matrix</h3>
+                <p>Hot-swap execution wording layers instantly straight from your active prompt via <code>pipsqueak flavor &lt;type&gt;</code>. Choose between <strong>CHILL</strong> for minimal human-first telemetry, <strong>DEV</strong> for cold data metrics, or <strong>CHAOS</strong> for unpredictable roommate responses.</p>
+            </div>
+            <div class="matrix-card">
+                <h3>Secure Local Scratchpad</h3>
+                <p>A completely offline, rapid-access markdown text engine isolated directly inside your terminal session path. Run <code>pipsqueak note add</code> to instantly append ideas or drop into your native configurations using <code>pipsqueak note edit</code>.</p>
+            </div>
+            <div class="matrix-card">
+                <h3>Ambient Diagnostics</h3>
+                <p>Scans background system metrics and error paths (via journalctl hooks) to cross-match structural execution crashes into clean, actionable solutions without any external network tracking or cloud lookups.</p>
+            </div>
+        </div>
+    </main>
+
+    <hr class="section-divider">
+
+    <!-- COMMUNITY LORE / MEME REVEAL SECTION -->
+    <section class="lore-section container">
+        <div class="lore-card">
+            <div class="lore-content">
+                <h2>// Guarding Your Shell</h2>
+                <p>Pipsqueak acts as a silent, context-aware guardian layer. If you run into severe system syntax execution script errors or permission deadlocks, the protective posture modes catch it, block execution, and keep your workspace intact.</p>
+                <div class="lore-quote">"Gotcha, Twin."</div>
+            </div>
+            <div class="lore-visual">
+                <img src="assets/image_623e47.png" alt="Pipsqueak protective twin meme layout" class="meme-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-global container">
+        <p>Pipsqueak is open-source software under the MIT License. Zero Tracking. 100% Offline.</p>
+    </footer>
+
+</body>
+</html>
